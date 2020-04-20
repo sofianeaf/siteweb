@@ -19,18 +19,27 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 -->
 <div class="container">
+
+	<div class="row">
+		A digital library for content I like.
+	</div>
+
 	<div class="row">
 		<div class="col-3 p-0">
 			<div class="card card-body">
 				<input id="search-input" class="form-comtrol" type="text">
 			</div>
 		</div>
+		<div class="col-7 p-0">
+			To do: Select what to include is search: title, date, or multiple...
+		</div>
 	</div>
 
 	<div class="row">
 		<table class="table table-striped">
 		    <tr  class="bg-info">
-						<th  class="bg-info" 	data-colname="date" 			data-order="desc"	>Date</th>
+						<th  class="bg-info" 	data-colname="title" 			data-order="desc"	>Title</th>
+						<th  									data-colname="date" 			data-order="desc"	>Date</th>
 		        <th  									data-colname="topic" 			data-order="desc"	>Topic</th>
 		        <th  									data-colname="author" 		data-order="desc"	>Author</th>
 		        <th  									data-colname="platform" 	data-order="desc"	>Platform</th>
@@ -39,6 +48,14 @@
 
 		    </tbody>
 		</table>
+	</div>
+
+	<div class="row">
+		<div class="collapse" id="collapseExample">
+  		<div class="card card-body">
+				Details about the video. Perhaps the 'comment' from the data array
+  		</div>
+		</div>
 	</div>
 
 	<script src="js/script.js"></script>
