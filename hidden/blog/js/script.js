@@ -1,13 +1,4 @@
 
-//var myArray = [
-//    {'date':'11/10/1989', 'topic':'zeb', 'author':'Sofiane Affes', 'platform':'youtube'},
-//    {'date':'10/01/1989', 'topic':'nom', 'author':'Fawzi Nounchaku', 'platform':'youtube'},
-//    {'date':'10/14/1990', 'topic':'nouna', 'author':'Sofiane Affes', 'platform':'youtube'},
-//    {'date':'11/29/1993', 'topic':'zeb', 'author':'Samir Zantou7a', 'platform':'dailymotion'},
-//    {'date':'03/12/1991', 'topic':'zeb', 'author':'Farid Frite', 'platform':'youtube'},
-//    {'date':'10/31/1995', 'topic':'nouna', 'author':'7mid 103', 'platform':'website'},
-//]
-
 var myArray = [
     {'date':'1989/10/11', 'topic':'zeb', 'author':'Sofiane Affes', 'platform':'youtube'},
     {'date':'1989/01/10', 'topic':'nom', 'author':'Fawzi Nounchaku', 'platform':'youtube'},
