@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Analytics Page</title>
+    </head>
+    <body>
+        <p>analytics</p>
+        <div class="topnav">
+			<a  				href="web.html"			>web</a>
+			<a class="active"	href="positions.html"	>positions</a>
+		</div>
+		<p>positions</p>
+
+<!-- 
+API KEY (coin API)
+9DBBFDD8-7EB0-4141-A009-87AB344BAEF7
+visit https://docs.coinapi.io/#list-all-exchanges
+-->
+
+	<script>
+		
+		const Http = new XMLHttpRequest();
+		const url='https://rest.coinapi.io/v1/exchanges';
+		Http.open("GET", url);
+		Http.setRequestHeader('X-CoinAPI-Key', '9DBBFDD8-7EB0-4141-A009-87AB344BAEF7')
+		Http.send();
+
+		Http.onreadystatechange = (e) => {
+		  console.log(Http.responseText)
+		}
+
+		alert("check the console output");
+
+  	</script>
+
+
+    </body>
+
+
+</html>
+
