@@ -15,26 +15,63 @@ API KEY (coin API)
 9DBBFDD8-7EB0-4141-A009-87AB344BAEF7
 visit https://docs.coinapi.io/#list-all-exchanges
 -->
-
-	<script>
 		
-		const Http = new XMLHttpRequest();
-		const url='https://rest.coinapi.io/v1/exchanges';
-		Http.open("GET", url);
-		Http.setRequestHeader('X-CoinAPI-Key', '9DBBFDD8-7EB0-4141-A009-87AB344BAEF7')
-		Http.send();
+		
+		<dir>
+			BTC:
+			<span id="btc"></span>
 
-		Http.onreadystatechange = (e) => {
-		  console.log(Http.responseText)
+			<script>
+				(() => {
+			  		const Http = new XMLHttpRequest();
+					const url = 'https://rest.coinapi.io/v1/exchangerate/BTC/USD';
+					Http.responseType = 'json';
+					Http.open("GET", url);
+					Http.setRequestHeader('X-CoinAPI-Key', '9DBBFDD8-7EB0-4141-A009-87AB344BAEF7')
+					Http.send();
+					Http.onreadystatechange = (e) => {
+						document.getElementById("btc").innerHTML = Http.response.rate;
+					}
+				})();
+			</script>
+		</dir>
+		<dir>
+			ADA:
+			<span id="ada"></span>
+
+			<script>
+				(() => {
+			  		const Http = new XMLHttpRequest();
+					const url = 'https://rest.coinapi.io/v1/exchangerate/ADA/USD';
+					Http.responseType = 'json';
+					Http.open("GET", url);
+					Http.setRequestHeader('X-CoinAPI-Key', '9DBBFDD8-7EB0-4141-A009-87AB344BAEF7')
+					Http.send();
+					Http.onreadystatechange = (e) => {
+						document.getElementById("ada").innerHTML = Http.response.rate;
+					}
+				})();
+			</script>
+		</dir>
+
+<!--
+<div>
+	<button onclick="getPriceBTC()">BTC</button>
+	<script>
+		function getPriceBTC() {
+			const Http = new XMLHttpRequest();
+			const url='https://rest.coinapi.io/v1/exchangerate/BTC/USD';
+			Http.open("GET", url);
+			Http.setRequestHeader('X-CoinAPI-Key', '9DBBFDD8-7EB0-4141-A009-87AB344BAEF7')
+			Http.send();
+			Http.onreadystatechange = (e) => {
+				console.log(Http.responseText)
+			}
 		}
-
-		alert("check the console output");
-
   	</script>
-
+</div>
+--> 
 
     </body>
-
-
 </html>
 
